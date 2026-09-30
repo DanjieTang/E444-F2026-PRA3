@@ -21,15 +21,30 @@ wheels = [
 ]
 
 [[package]]
+name = "dominate"
+version = "2.9.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fb/f3/1c8088ff19a0fcd9c3234802a0ee47006ea64bd8852f1019194f0e3583ff/dominate-2.9.1.tar.gz", hash = "sha256:558284687d9b8aae1904e3d6051ad132dd4a8c0cf551b37ea4e7e42a31d19dc4", size = 37715, upload-time = "2023-12-24T20:45:19.192Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/58/19/0380af745f151a1648657bbcef0fb49ac28bf09083d94498163ffd9b32dc/dominate-2.9.1-py2.py3-none-any.whl", hash = "sha256:cb7b6b79d33b15ae0a6e87856b984879927c7c2ebb29522df4c75b28ffd9b989", size = 29976, upload-time = "2023-12-24T20:45:17.154Z" },
+]
+
+[[package]]
 name = "e444-f2026-pra3"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "flask" },
+    { name = "flask-bootstrap" },
+    { name = "flask-moment" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "flask", specifier = ">=3.1.3" }]
+requires-dist = [
+    { name = "flask", specifier = ">=3.1.3" },
+    { name = "flask-bootstrap", specifier = ">=3.3.7.1" },
+    { name = "flask-moment", specifier = ">=1.0.6" },
+]
 
 [[package]]
 name = "flask"
@@ -46,6 +61,30 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/26/00/35d85dcce6c57fdc871f3867d465d780f302a175ea360f62533f12b27e2b/flask-3.1.3.tar.gz", hash = "sha256:0ef0e52b8a9cd932855379197dd8f94047b359ca0a78695144304cb45f87c9eb", size = 759004, upload-time = "2026-02-19T05:00:57.678Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/7f/9c/34f6962f9b9e9c71f6e5ed806e0d0ff03c9d1b0b2340088a0cf4bce09b18/flask-3.1.3-py3-none-any.whl", hash = "sha256:f4bcbefc124291925f1a26446da31a5178f9483862233b23c0c96a20701f670c", size = 103424, upload-time = "2026-02-19T05:00:56.027Z" },
+]
+
+[[package]]
+name = "flask-bootstrap"
+version = "3.3.7.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "dominate" },
+    { name = "flask" },
+    { name = "visitor" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/88/53/958ce7c2aa26280b7fd7f3eecbf13053f1302ee2acb1db58ef32e1c23c2a/Flask-Bootstrap-3.3.7.1.tar.gz", hash = "sha256:cb08ed940183f6343a64e465e83b3a3f13c53e1baabb8d72b5da4545ef123ac8", size = 456359, upload-time = "2017-01-11T23:28:23.944Z" }
+
+[[package]]
+name = "flask-moment"
+version = "1.0.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask" },
+    { name = "packaging" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/19/9c/d203c16773414f2c0ba97e68b224c1f9e01fffa845066601260672555f18/flask_moment-1.0.6.tar.gz", hash = "sha256:2f8969907cbacde4a88319792e8f920ba5c9dd9d99ced2346cad563795302b88", size = 13386, upload-time = "2024-05-28T22:20:41.742Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/59/45/fd18ef78325db99b4db449dd859ff9a31b8c42c5ba190970249e0ee1d483/Flask_Moment-1.0.6-py3-none-any.whl", hash = "sha256:3ae8baea20a41e99f457b9710ecd1368911dd5133f09a27583eb0dcb3491e31d", size = 6220, upload-time = "2024-05-28T22:20:40.303Z" },
 ]
 
 [[package]]
@@ -153,6 +192,21 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/1a/8a/0402ba61a2f16038b48b39bccca271134be00c5c9f0f623208399333c448/markupsafe-3.0.3-cp314-cp314t-win_amd64.whl", hash = "sha256:4faffd047e07c38848ce017e8725090413cd80cbc23d86e55c587bf979e579c9", size = 15426, upload-time = "2025-09-27T18:37:27.316Z" },
     { url = "https://files.pythonhosted.org/packages/70/bc/6f1c2f612465f5fa89b95bead1f44dcb607670fd42891d8fdcd5d039f4f4/markupsafe-3.0.3-cp314-cp314t-win_arm64.whl", hash = "sha256:32001d6a8fc98c8cb5c947787c5d08b0a50663d139f1305bac5885d98d9b40fa", size = 14146, upload-time = "2025-09-27T18:37:28.327Z" },
 ]
+
+[[package]]
+name = "packaging"
+version = "26.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz", hash = "sha256:94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79", size = 313412, upload-time = "2026-08-04T18:15:28.737Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl", hash = "sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c", size = 129956, upload-time = "2026-08-04T18:15:27.159Z" },
+]
+
+[[package]]
+name = "visitor"
+version = "0.1.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/58/785fcd6de4210049da5fafe62301b197f044f3835393594be368547142b0/visitor-0.1.3.tar.gz", hash = "sha256:2c737903b2b6864ebc6167eef7cf3b997126f1aa94bdf590f90f1436d23e480a", size = 3260, upload-time = "2016-05-18T19:27:53.383Z" }
 
 [[package]]
 name = "werkzeug"
