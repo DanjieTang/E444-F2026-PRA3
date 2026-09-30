@@ -10,3 +10,5 @@ This is created by Danjie Tang and this repo is a clone of https://github.com/mi
 
 ## Activity 2.5
 <img width="1162" height="601" alt="Screenshot 2026-09-30 at 1 23 53 AM" src="https://github.com/user-attachments/assets/cb5b1f57-00dc-4381-9a7a-39492228637a" />
+
+<img width="1162" height="601" alt="Screenshot 2026-09-30 at 1 27 21 AM" src="https://github.com/user-attachments/assets/e231871b-0a27-4456-86e0-653b2b932409" />
