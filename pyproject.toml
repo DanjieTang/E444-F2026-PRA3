@@ -9,4 +9,6 @@ dependencies = [
     "flask-bootstrap>=3.3.7.1",
     "flask-moment>=1.0.6",
     "flask-wtf>=1.3.0",
+    "python-dotenv>=1.2.3",
+    "requests>=2.34.2",
 ]

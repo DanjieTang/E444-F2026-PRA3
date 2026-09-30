@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Chat with Flasky, {{ name }}!</h1>
+</div>
+
+<div id="chat-log" class="well" style="height: 300px; overflow-y: auto;"></div>
+
+<form id="chat-form" class="form-inline">
+    <input id="message" type="text" class="form-control" placeholder="Type a message..." autocomplete="off" style="width: 70%;">
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+<form method="post" action="{{ url_for('logout') }}" style="margin-top: 20px;">
+    <button type="submit" class="btn btn-danger">Logout</button>
+</form>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+function addLine(who, text) { // Append one line to the chat log
+    var line = document.createElement('p');
+    var label = document.createElement('strong');
+    label.textContent = who + ': ';
+    line.appendChild(label);
+    line.appendChild(document.createTextNode(text)); // textContent/text nodes so user input is never run as HTML
+    var log = document.getElementById('chat-log');
+    log.appendChild(line);
+    log.scrollTop = log.scrollHeight;
+}
+
+document.getElementById('chat-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Send with JavaScript instead of reloading the page
+    var input = document.getElementById('message');
+    var message = input.value.trim();
+    if (!message) return;
+    addLine('You', message);
+    input.value = '';
+    fetch('{{ url_for("chat") }}', { // The browser sends the session cookie along automatically
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({message: message})
+    })
+        .then(function (response) { return response.json(); })
+        .then(function (data) { addLine('Bot', data.reply); });
+});
+</script>
+{% endblock %}
